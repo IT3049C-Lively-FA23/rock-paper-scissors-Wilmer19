@@ -19,7 +19,8 @@ gameScreen.classList.add(`d-none`);
 
 // updateScoreTallyUI
 function updateScoreTallyUI(){
-
+  const scoreParagraph = document.querySelector(`#score`);
+  scoreParagraph.textContent = this.game.username + ":" + this.game.score.user + " v CPU:" + this.game.score.cpu;
 }
 
 // updateGameHistoryUI
@@ -36,7 +37,7 @@ startGameButton.addEventListener(`click`, function () {
 
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
-  
+
   // Complete
 });
 
