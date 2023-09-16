@@ -3,8 +3,8 @@
 const welcomeScreen = document.getElementById(`welcome-screen`);
 const gameScreen = document.querySelector(`#game-screen`);
 const startGameButton = document.querySelector(`#start-game-button`);
-const username = document.querySelector(`#username`);
-const userSelection = document.querySelector(`#user-selection`);
+const username = document.getElementById("username").value;
+const userSelection = document.getElementById(`user-selection`).value;
 const goButton = document.querySelector(`#go-button`);
 const scoreParagraph = document.querySelector(`#score`);
 const gameHistoryParagraph = document.querySelector(`#game-history`);
@@ -20,20 +20,25 @@ gameScreen.classList.add(`d-none`);
 // updateScoreTallyUI
 function updateScoreTallyUI(){
   const scoreParagraph = document.querySelector(`#score`);
-  scoreParagraph.textContent = this.game.username + ":" + this.game.score.user + " v CPU:" + this.game.score.cpu;
+  scoreParagraph.textContent = document.getElementById("username").value + ":" + game.score.user + " v CPU:" + game.score.cpu;
+  console.log(document.getElementById("username").value);
 }
+
 
 // updateGameHistoryUI
 function updateGameHistoryUI(){
+  const gameHistoryParagraph = document.querySelector(`#game-history`);
+  gameHistoryParagraph.textContent = this.gameHistoryLog
 
 }
 
 // start-game-button EventListener
 startGameButton.addEventListener(`click`, function () {
-  //const username = document.getElementById("username-input").value;
-  const username = document.querySelector(`#username`).value;
+  
+  //const username = document.querySelector(`#username`);
+  
 
-  game = new RockPaperScissors(username);
+  game = new RockPaperScissors(this.username);
 
   welcomeScreen.classList.add(`d-none`);
   gameScreen.classList.remove(`d-none`);
@@ -43,6 +48,11 @@ startGameButton.addEventListener(`click`, function () {
 
 // go-button EventListener
 goButton.addEventListener(`click`, function () {
+
+  const userSelection = document.getElementById(`user-selection`).value;
+  game.play(userSelection);
+  updateScoreTallyUI();
+  updateGameHistoryUI();
   
 });
 
