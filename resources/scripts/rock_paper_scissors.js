@@ -2,8 +2,9 @@ class RockPaperScissors {
   constructor(username) {
     this.username = username;
     this.score = {
-      user: 0,
+      user:0,
       cpu:0 
+      
     },
     this.gameHistoryLog = [];
   }
@@ -37,7 +38,9 @@ class RockPaperScissors {
    */
   determineWinner(userSelection, cpuSelection){
 
+
     if(userSelection === cpuSelection){
+      
       return "tie";
     } else if(userSelection === "rock" && cpuSelection === "scissors")
       {return "win"}
@@ -57,16 +60,18 @@ class RockPaperScissors {
   play(userSelection){
 
     
-    const cpuSelection1 = generateCPUResponse();
-    const winner = determineWinner(userSelection, cpuSelection1);
+    const cpuSelection = this.generateCPUResponse();
+    const winner = this.determineWinner(userSelection, cpuSelection);
 
     if(winner === "user"){
       // if the user won the round
-      this.score.user ++;
+      this.score.user++;
+      console.log(this.score.user++);
       this.gameHistoryLog.push(this.user + "selected" + this.userSelection + "," + this.cpu + "selected" + this.cpuSelection + ":" + this.user + "wins");
     } else if(winner === "cpu"){
       // if the user cpu the round
-      this.score.cpu ++;
+      this.score.cpu++;
+      console.log(this.score.cpu++);
       this.gameHistoryLog.push(this.user + "selected" + this.userSelection + "," + this.cpu + "selected" + this.cpuSelection + ":" + this.cpu + "wins");
     } else{
       this.gameHistoryLog.push(this.user + "selected" + this.userSelection + "," + this.cpu + "selected" + this.cpuSelection + ":" + "It's a tie");
