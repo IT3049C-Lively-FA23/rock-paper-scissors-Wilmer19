@@ -7,16 +7,21 @@
 Instructions to this assignment can be found [here](https://reedws.github.io/IT3049C/coursework/assignments/rock-paper-scissors/).
 - [x] update the assignment checks above to the correct link. - Done Automatically
 ## Checklist:
-- [ ] update the assignment checks above to the correct link
-- [ ] All tests are passing
-- [ ] filled out the self-evaluation.
-- [ ] filled out the self-reflection.
+- [X] update the assignment checks above to the correct link
+- [X] All tests are passing
+- [X] filled out the self-evaluation.
+- [X] filled out the self-reflection.
 
 ## Self-Evaluation: 
 how many points out of 20 does your team deserve on this assignment. Revise the assignment grading guideline and assignment rubrics for guidance.
+I believe I deserve 20/20 because all of my unit tests passed, I'm receiving no errors and my game works.
 
 ## Team Reflection:
 - Where did you encounter struggles today, and what did you do to deal with it?
+I struggled with section "play(userSelection)" and part 4 of the assignment because I had trouble understanding the intstruction.
+I handled this issue by asking for help at The IT Learning Center. The TA was really helpful and I had a better understanding. 
+
 
 
 ### How long it took us to finish this?
+In total, it took me around 6 hours.
