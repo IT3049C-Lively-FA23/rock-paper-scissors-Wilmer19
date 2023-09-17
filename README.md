@@ -14,7 +14,8 @@ Instructions to this assignment can be found [here](https://reedws.github.io/IT3
 
 ## Self-Evaluation: 
 how many points out of 20 does your team deserve on this assignment. Revise the assignment grading guideline and assignment rubrics for guidance.
-I believe I deserve 20/20 because all of my unit tests passed, I'm receiving no errors and my game works.
+I believe I deserve an 18/20 because all of my unit tests passed and my game works. The only thing I wasn't able to figure out
+was updating the game history on the game. 
 
 ## Team Reflection:
 - Where did you encounter struggles today, and what did you do to deal with it?
