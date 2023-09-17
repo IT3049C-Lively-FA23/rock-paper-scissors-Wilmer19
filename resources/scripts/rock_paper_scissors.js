@@ -63,15 +63,13 @@ class RockPaperScissors {
     const cpuSelection = this.generateCPUResponse();
     const winner = this.determineWinner(userSelection, cpuSelection);
 
-    if(winner === "user"){
+    if(winner === "win"){
       // if the user won the round
       this.score.user++;
-      console.log(this.score.user++);
       this.gameHistoryLog.push(this.user + "selected" + this.userSelection + "," + this.cpu + "selected" + this.cpuSelection + ":" + this.user + "wins");
-    } else if(winner === "cpu"){
+    } else if(winner === "lose"){
       // if the user cpu the round
       this.score.cpu++;
-      console.log(this.score.cpu++);
       this.gameHistoryLog.push(this.user + "selected" + this.userSelection + "," + this.cpu + "selected" + this.cpuSelection + ":" + this.cpu + "wins");
     } else{
       this.gameHistoryLog.push(this.user + "selected" + this.userSelection + "," + this.cpu + "selected" + this.cpuSelection + ":" + "It's a tie");
